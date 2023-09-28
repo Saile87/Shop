@@ -11,6 +11,8 @@
 		567256992AC60A2C00F606AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567256982AC60A2C00F606AD /* ContentView.swift */; };
 		5672569B2AC60A2F00F606AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5672569A2AC60A2F00F606AD /* Assets.xcassets */; };
 		5672569E2AC60A2F00F606AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5672569D2AC60A2F00F606AD /* Preview Assets.xcassets */; };
+		567256A52AC60AD000F606AD /* Hardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567256A42AC60AD000F606AD /* Hardware.swift */; };
+		567256A72AC60AEC00F606AD /* Clothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567256A62AC60AEC00F606AD /* Clothes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		567256982AC60A2C00F606AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5672569A2AC60A2F00F606AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5672569D2AC60A2F00F606AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		567256A42AC60AD000F606AD /* Hardware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hardware.swift; sourceTree = "<group>"; };
+		567256A62AC60AEC00F606AD /* Clothes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clothes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				567256962AC60A2C00F606AD /* ShopApp.swift */,
 				567256982AC60A2C00F606AD /* ContentView.swift */,
+				567256A42AC60AD000F606AD /* Hardware.swift */,
+				567256A62AC60AEC00F606AD /* Clothes.swift */,
 				5672569A2AC60A2F00F606AD /* Assets.xcassets */,
 				5672569C2AC60A2F00F606AD /* Preview Content */,
 			);
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				567256A52AC60AD000F606AD /* Hardware.swift in Sources */,
 				567256992AC60A2C00F606AD /* ContentView.swift in Sources */,
+				567256A72AC60AEC00F606AD /* Clothes.swift in Sources */,
 				567256972AC60A2C00F606AD /* ShopApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

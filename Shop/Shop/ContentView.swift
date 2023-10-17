@@ -9,24 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let hardwares: [Hardware] = [Keyboard(id: 1, brand: "RK68", price: 50, color: "White", serialNumber: 99),
-                                 Mouse(id: 2, brand: "Logitech", price: 44, Color: "Black", serialNumber: 98),
-                                 CallOfDuty(id: 3, serialNumber: 97, brand: "Activison", price: 55),
-                                 Fifa23(id: 4, serialNumber: 96, brand: "EASports", price: 60)
+    let products: [any Product] = [Keyboard(name: "RK68", id: 1, brand: "RK68", price: 50, serialNumber: 99, power: 10),
+                                   Mouse(name: "MK10", id: 2, brand: "Logitech", price: 44, serialNumber: 98, power: 5),
+                                   CallOfDuty(name: "Activison", id: 3, serialNumber: 97, brand: "Activison", price: 55),
+                                   Fifa23(name: "EASports", id: 4, serialNumber: 96, brand: "EASports", price: 60)
     ]
+    
+//    func showProducts(_ product: any Product) {
+//        print(product.id)
+//    }
+    
+    func showProducts<T: Product>(_ product: T) {
+        print(product.id)
+    }
     
     var body: some View {
         VStack {
             List {
-                TextField("Bro", text: $hardwares)
+                ForEach(products, id: \.id) { product in
+                    Text("name: \(product.name)")
+                }
             }
         }
     }
 }
-
-
-
-
 
 
 #Preview {

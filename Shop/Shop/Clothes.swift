@@ -7,31 +7,39 @@
 
 import Foundation
 
-protocol Clothes {
+
+
+protocol Clothe: Product {
     var size: String { get }
     var brand: String { get }
 }
 
-protocol Accessoires {
+protocol Accessory: Product {
     var price: Int { get }
     var material: String { get }
 }
 
-struct Hoodie: Clothes, Accessoires {
+struct Hoodie: Clothe, Accessory {
+    var name: String
+    var id: Int
     var material: String
     var size: String
     var brand: String
     var price: Int
 }
 
-struct Shirt: Clothes, Accessoires {
+struct Shirt: Clothe, Accessory {
+    var name: String
+    var id: Int
     var material: String
     var size: String
     var brand: String
     var price: Int
 }
 
-struct Belt: Clothes, Accessoires {
+struct Belt: Clothe, Accessory {
+    var name: String
+    var id: Int
     var material: String
     var size: String
     var brand: String

@@ -7,40 +7,50 @@
 
 import Foundation
 
-protocol Hardware {
+protocol Product: Identifiable {
+    var name: String { get }
     var id: Int { get }
     var price: Int { get }
+    
 }
 
-protocol Games {
+protocol Hardware: Product {
+    var power: Int { get }
+}
+
+protocol Games: Product {
     var serialNumber: Int { get }
     var brand: String { get }
 }
 
-struct Keyboard: Hardware, Games {
+struct Keyboard: Hardware {
+    var name: String
     var id: Int
     var brand: String
     var price: Int
-    var color: String
     var serialNumber: Int
+    var power: Int
 }
 
-struct Mouse: Hardware, Games {
+struct Mouse: Hardware {
+    var name: String
     var id: Int
     var brand: String
     var price: Int
-    var Color: String
     var serialNumber: Int
+    var power: Int
 }
 
-struct CallOfDuty: Hardware, Games {
+struct CallOfDuty: Games {
+    var name: String
     var id:  Int
     var serialNumber: Int
     var brand: String
     var price: Int
 }
 
-struct Fifa23: Hardware, Games {
+struct Fifa23: Games {
+    var name: String
     var id:  Int
     var serialNumber: Int
     var brand: String

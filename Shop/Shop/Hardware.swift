@@ -49,7 +49,7 @@ struct CallOfDuty: Games {
     var price: Int
 }
 
-struct Fifa23: Games {
+struct Fifa24: Games {
     var name: String
     var id:  Int
     var serialNumber: Int

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct KeyboardView: View {
     
     var keyboard: Keyboard
@@ -14,10 +15,16 @@ struct KeyboardView: View {
     var body: some View {
 
         Text("\(keyboard.name)")
-        Text("\(keyboard.brand)")
-        Text("\(keyboard.id)")
-        Text("\(keyboard.serialNumber)")
-        Text("\(keyboard.price)€")
+            .font(.title2)
+            .bold()
+        Spacer()
+                List {
+            Text("Typ: \(keyboard.brand)")
+            Text("ID: \(keyboard.id)")
+            Text("Serien Nr.: \(keyboard.serialNumber)")
+            Text("Preis: \(keyboard.price)€")
+            Text("Leistung: \(keyboard.power)")
+        }
     }
 }
 
@@ -28,10 +35,16 @@ struct MouseView: View {
     var body: some View {
         
         Text("\(mouse.name)")
-        Text("\(mouse.brand)")
-        Text("\(mouse.id)")
-        Text("\(mouse.serialNumber)")
-        Text("\(mouse.price)€")
+            .font(.title2)
+                .bold()
+            Spacer()
+                  List {
+                Text("Typ: \(mouse.brand)")
+                Text("ID: \(mouse.id)")
+                Text("Serien Nr.: \(mouse.serialNumber)")
+                Text("Preis: \(mouse.price)€")
+                Text("Leistung: \(mouse.power)")
+            }
     }
 }
 
@@ -41,12 +54,39 @@ struct CallOfDutyView: View {
     
     var body: some View {
         
+        
+        
         Text("\(cod.name)")
+
         Text("\(cod.brand)")
         Text("\(cod.id)")
         Text("\(cod.serialNumber)")
         Text("\(cod.price)€")
     }
+}
+
+struct Fifa24View: View {
+    
+    var fifa: Fifa24
+    
+    var body: some View {
+        
+        Text("\(fifa.name)")
+            .font(.title2)
+            .bold()
+        Spacer()
+        List {
+            Text("Typ: \(fifa.name)")
+            Text("ID: \(fifa.id)")
+            Text("Hersteller: \(fifa.brand)")
+            Text("Serien Nr.: \(fifa.serialNumber)")
+            Text("Preis: \(fifa.price)€")
+        }
+    }
+}
+
+#Preview {
+    Fifa24View(fifa: Fifa24(name: "Fifa 24", id: 9988, serialNumber: 1122, brand: "EASports", price: 70))
 }
 
 #Preview {

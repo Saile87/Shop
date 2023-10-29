@@ -36,7 +36,7 @@ struct ContentView: View {
 //                    Text("\(product.name)")
 //                }
                 
-                    NavigationLink(destination: KeyboardView(keyboard: Keyboard(name: "Tastatur", id: 1, brand: "RK68", price: 3, serialNumber: 4, power: 5))) {
+                    NavigationLink(destination: KeyboardView(keyboard: Keyboard(name: "Tastatur", id: 139349, brand: "RK68", price: 70, serialNumber: 390909, power: 12))) {
                     Text("Tastatur")
                     }
                     

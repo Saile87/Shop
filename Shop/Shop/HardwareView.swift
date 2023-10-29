@@ -15,15 +15,13 @@ struct KeyboardView: View {
     var body: some View {
 
         Text("\(keyboard.name)")
-            .font(.title2)
-            .bold()
-        Spacer()
+            .customStyle()
                 List {
             Text("Typ: \(keyboard.brand)")
             Text("ID: \(keyboard.id)")
             Text("Serien Nr.: \(keyboard.serialNumber)")
             Text("Preis: \(keyboard.price)€")
-            Text("Leistung: \(keyboard.power)")
+            Text("Leistung: \(keyboard.power)W")
         }
     }
 }
@@ -35,15 +33,13 @@ struct MouseView: View {
     var body: some View {
         
         Text("\(mouse.name)")
-            .font(.title2)
-                .bold()
-            Spacer()
+            .customStyle()
                   List {
                 Text("Typ: \(mouse.brand)")
                 Text("ID: \(mouse.id)")
                 Text("Serien Nr.: \(mouse.serialNumber)")
                 Text("Preis: \(mouse.price)€")
-                Text("Leistung: \(mouse.power)")
+                Text("Leistung: \(mouse.power)W")
             }
     }
 }
@@ -57,11 +53,13 @@ struct CallOfDutyView: View {
         
         
         Text("\(cod.name)")
-
-        Text("\(cod.brand)")
-        Text("\(cod.id)")
-        Text("\(cod.serialNumber)")
-        Text("\(cod.price)€")
+            .customStyle()
+        List {
+            Text("ID: \(cod.id)")
+            Text("Hersteller: \(cod.brand)")
+            Text("Serien Nr.: \(cod.serialNumber)")
+            Text("Preis: \(cod.price)€")
+        }
     }
 }
 
@@ -71,12 +69,11 @@ struct Fifa24View: View {
     
     var body: some View {
         
-        Text("\(fifa.name)")
-            .font(.title2)
-            .bold()
-        Spacer()
+        
+        
+            Text("\(fifa.name)")
+            .customStyle()
         List {
-            Text("Typ: \(fifa.name)")
             Text("ID: \(fifa.id)")
             Text("Hersteller: \(fifa.brand)")
             Text("Serien Nr.: \(fifa.serialNumber)")

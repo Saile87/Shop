@@ -13,18 +13,20 @@ struct KeyboardView: View {
     var keyboard: Keyboard
     
     var body: some View {
-
-        Text("\(keyboard.name)")
-            .customStyle()
+        VStack {
+            
+            Text("\(keyboard.name)")
+                .customStyle()
                 List {
-            Text("Typ: \(keyboard.brand)")
-            Text("ID: \(keyboard.id)")
-            Text("Serien Nr.: \(keyboard.serialNumber)")
-            Text("Preis: \(keyboard.price)€")
-            Text("Leistung: \(keyboard.power)W")
+                    Text("Typ: \(keyboard.brand)")
+                    Text("ID: \(keyboard.id)")
+                    Text("Serien Nr.: \(keyboard.serialNumber)")
+                    Text("Preis: \(keyboard.price)€")
+                    Text("Leistung: \(keyboard.power)W")
+                }
+            }
         }
     }
-}
 
 struct MouseView: View {
     

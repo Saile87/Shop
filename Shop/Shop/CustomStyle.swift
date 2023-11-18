@@ -11,11 +11,9 @@ struct CustomStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.headline)
-                .bold()
-            Spacer()
-
+            .bold()
+            .foregroundColor(.black)
     }
-
 }
 
 extension View {

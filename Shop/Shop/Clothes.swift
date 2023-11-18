@@ -10,38 +10,21 @@ import Foundation
 
 
 protocol Clothe: Product {
-    var size: String { get }
-    var brand: String { get }
-}
-
-protocol Accessory: Product {
-    var price: Int { get }
+    var size: String? { get }
     var material: String { get }
+    var width: Int? { get }
+    var length: Int? { get }
+
 }
 
-struct Hoodie: Clothe, Accessory {
+struct ClotheItem: Clothe {
+    var manufacturer: String
+    var size: String?
+    var width: Int?
+    var length: Int?
     var name: String
     var id: Int
-    var material: String
-    var size: String
-    var brand: String
     var price: Int
+    var material: String
 }
 
-struct Shirt: Clothe, Accessory {
-    var name: String
-    var id: Int
-    var material: String
-    var size: String
-    var brand: String
-    var price: Int
-}
-
-struct Belt: Clothe, Accessory {
-    var name: String
-    var id: Int
-    var material: String
-    var size: String
-    var brand: String
-    var price: Int
-}

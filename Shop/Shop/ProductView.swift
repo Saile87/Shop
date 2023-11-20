@@ -46,7 +46,7 @@ struct ProductView: View {
                                 
                                 
                                 if (clothe.size) != nil {
-                                    Text("Größe: \(clothe.size ?? "nix")")
+                                    Text("Größe: \(clothe.size ?? "")")
                                 } else {
                                     Text("")
                                 }
@@ -78,13 +78,13 @@ struct ProductView: View {
 }
 
 #Preview {
-    ProductView(product: HardwareItem(name: "Hardware", id: 1, manufacturer: "", price: 1, serialNumber: 1, power: 1))
+    ProductView(product: HardwareItem(name: "", id: 1, manufacturer: "", price: 1, serialNumber: 1, power: 1))
 }
 
 #Preview {
-    ProductView(product: GameItem(fsk: 1, name: "Games", id: 1, manufacturer: "Test", price: 1))
+    ProductView(product: GameItem(fsk: 1, name: "", id: 1, manufacturer: "", price: 1))
 }
 
 #Preview {
-    ProductView(product: ClotheItem(manufacturer: "", size: "M", width: 1, length: 1, name: "Clothes", id: 1, price: 1, material: ""))
+    ProductView(product: ClotheItem(manufacturer: "", size: "", width: 1, length: 1, name: "", id: 1, price: 1, material: ""))
 }

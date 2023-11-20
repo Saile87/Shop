@@ -12,7 +12,7 @@ struct ClotheView: View {
     var clothe: any Clothe
     
     let clothes: [any Clothe] = [ClotheItem(manufacturer: "adidas", size: "M", name: "adidas-Hoodie", id: 12, price: 40,                            material: "Baumwolle"),
-                                 ClotheItem(manufacturer: "adidas", size: "M", width: 32, length: 32, name: "adidas-Hose", id: 7878, price: 55, material: "Polyester")
+                                 ClotheItem(manufacturer: "adidas", width: 32, length: 32, name: "adidas-Hose", id: 7878, price: 55, material: "Polyester")
     ]
     
     var body: some View {
